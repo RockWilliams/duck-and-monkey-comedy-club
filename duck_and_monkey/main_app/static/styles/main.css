@@ -95,3 +95,16 @@ footer,.right{
     width: 30px!important;
     height: 30px!important;
 }
+
+.data{
+    color:white;
+}
+
+hr {
+    position: relative;
+    z-index: 10;
+    border: none;
+    width: 96vw;
+    height: 12px;
+    background-color: lightgray;
+}
