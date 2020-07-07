@@ -28,15 +28,8 @@ h1{
 }
 
 h2{
-    /* font-family: SF Pro Display!important;
-    font-style: bold!important;
-    font-size: 20px!important; */
     position: relative;
-    /* width: 167px;
-    height: 72px;
-    left: 17px;
-    top: 652px; */
-    
+    width: 167px;
     font-family: SF Pro Display;
     font-style: normal;
     font-weight: bold;
@@ -51,11 +44,25 @@ h3{
     font-size: 16px!important;
 }
 
-.card{
+h4{
+    font-size: 1em!important;
+    text-align: left!important;
+    /* display: flex;
+    align-content: flex-end; */
+}
+
+.card {
     position: relative;
     background-color: var(--box-comedian-info)!important;
     width: 280px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center!important;
+    align-items: center!important;
+    justify-content: center!important;
+    justify-items: center!important;
+    border-radius: 0px 0px 0px 0px!important;
     /* align-items: center; */
 }
 
@@ -74,13 +81,13 @@ h3{
       background-color: var(--button-gold)!important;
       margin: 5px!important;
       color: white!important;
-      width: 80%!important;
+      width: 110px!important;
       box-shadow: 0px 4px 8px #414141;     
   }
 
-img{
+/* img{
     width: max-content;
-}
+} */
 
 footer,.right{
     background-color: var(--background-drk-blue);
