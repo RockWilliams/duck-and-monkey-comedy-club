@@ -28,26 +28,20 @@
 	</head>
 	<header>
 		<h1>Duck and Monkey Comedy Club</h1>
-		<div class="container">
-			<!-- This checkbox will give us the toggle behavior, it will be hidden, but functional -->
-			<input id="toggle" type="checkbox">
-		
-			<!-- IMPORTANT: Any element that we want to modify when the checkbox state changes go here, being "sibling" of the checkbox element -->
-		
-			<!-- This label is tied to the checkbox, and it will contain the toggle "buttons" -->
-			<label class="toggle-container" for="toggle">
-				<!-- If menu is open, it will be the "X" icon, otherwise just a clickable area behind the hamburger menu icon -->
-				<span class="button button-toggle"></span>
-			</label>
-		
-			<!-- The nav menu -->
-			<nav class="nav">
-				<a class="nav-item" href="">Dashboard</a>
-				<a class="nav-item" href="">History</a>
-				<a class="nav-item" href="">Statistics</a>
-				<a class="nav-item" href="">Settings</a>
-			</nav>
-		</div>
+		<nav>
+			<div class="tootle-menu" >
+				<h1 id="toggle-bar">
+					☰
+				</h1>
+			</div>
+			<ul class="mainMenu">
+				<li><a href="">Home</a></li>
+				<li><a href="">Test</a></li>
+				<li><a href="">Services</a></li>
+				<li><a href="">Blog</a></li>
+				<li><a href="">Portfolio</a></li>
+			</ul>
+		</nav>	
 	</header>
 	<body>
 		{% block body %} 
