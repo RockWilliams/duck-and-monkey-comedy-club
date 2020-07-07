@@ -8,9 +8,10 @@
 html,
 body {
     background-color: var(--background-drk-blue)!important;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
+    align-content: center!important;
+    align-items: center!important;
+    justify-content: center!important;
+    justify-items: center!important;
    
 }
 
@@ -53,14 +54,19 @@ h3{
 .card{
     position: relative;
     background-color: var(--box-comedian-info)!important;
-    /* display: flex;
-    justify-content: center;
-    align-content: center; */
-    align-items: center;
+    width: 280px;
+    /* align-items: center; */
 }
 
 .events-calendar{
     background-color: var(--background-drk-blue);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center!important;
+    align-items: center!important;
+    justify-content: center!important;
+    justify-items: center!important;
+
 }
 
 .btn{
@@ -68,7 +74,8 @@ h3{
       margin: 5px!important;
       color: white!important;
       width: 80%!important;
-      justify-self: center;
+    
+     
   }
 
 img{
