@@ -2,7 +2,7 @@
 
 {% block body %}
     <h1>Home</h1>
-    <form class="subscriber-form" method="POST">
+    <form action="/#sub-form" id="sub-form" class="subscriber-form" method="POST">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit" class="btn tbn-default">Subscribe!</button>
