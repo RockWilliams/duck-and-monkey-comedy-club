@@ -55,6 +55,7 @@ h3{
     position: relative;
     background-color: var(--box-comedian-info)!important;
     width: 280px;
+    margin-bottom: 15px;
     /* align-items: center; */
 }
 
@@ -74,10 +75,23 @@ h3{
       margin: 5px!important;
       color: white!important;
       width: 80%!important;
-    
-     
+      box-shadow: 0px 4px 8px #414141;     
   }
 
 img{
     width: max-content;
+}
+
+footer,.right{
+    background-color: var(--background-drk-blue);
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center!important;
+}
+
+.fab {
+    width: 30px!important;
+    height: 30px!important;
 }
