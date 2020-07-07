@@ -5,6 +5,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="{%static 'styles/main.css'%}">
+		<link rel="stylesheet" href="{%static 'styles/hamburger.css'%}">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 		<script src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -35,11 +36,12 @@
 				</h1>
 			</div>
 			<ul class="mainMenu">
-				<li><a href="">Home</a></li>
-				<li><a href="">Test</a></li>
-				<li><a href="">Services</a></li>
-				<li><a href="">Blog</a></li>
-				<li><a href="">Portfolio</a></li>
+				<li><a href="{% url 'home' %}">Home</a></li>
+				<li><a href="">Calendar</a></li>
+				<li><a href="">Venue Info</a></li>
+				<li><a href="">Private Events</a></li>
+				<li><a href="">FAQ</a></li>
+				<li><a href="{% url 'dashboard' %}">Admin</a></li>
 			</ul>
 		</nav>	
 	</header>

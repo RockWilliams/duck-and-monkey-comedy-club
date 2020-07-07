@@ -12,7 +12,7 @@
 
 @media (min-width: 769px){
 	.mainMenu{
-		display: initial;
+		display: block;
 	}
 
 	#toggle-bar{
