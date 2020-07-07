@@ -1,9 +1,16 @@
 {% extends 'base.html' %} 
 
 {% block body %}
-	<h1>Dashboard</h1>
-	<h3>Current Subscribers: {{ subscribers.count }}</h3>
-	{% for subscriber in subscribers %}
-		<p>Name: {{ subscriber.full_name }} Email: {{ subscriber.email }}</p>
-	{% endfor %}
+	
+	<h1>Admin: Newsletter Analytics</h1>
+	<h2 class="data" >Total Number of Signups: {{ subscribers.count }}</h3>
+	<div class="analytics">
+		{% for subscriber in subscribers %}
+			<p class="data" >
+				Name: {{ subscriber.full_name }} Email: {{ subscriber.email }}
+			</p>
+			<hr id="line">
+		{% endfor %}
+	</div>
+	
 {% endblock %}

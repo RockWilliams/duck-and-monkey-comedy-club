@@ -1,0 +1,22 @@
+@media (max-width: 768px){
+	.mainMenu{
+		display: none;
+	}
+
+	.mainMenu.hamburger{
+		display: block;
+	}
+
+}
+
+
+@media (min-width: 769px){
+	.mainMenu{
+		display: block;
+	}
+
+	#toggle-bar{
+		display: none;
+	}
+
+}
