@@ -10,16 +10,19 @@ def home(request):
         form = Subscriber_Form(request.POST)
         if form.is_valid():
             sub_error = False
+            success = True
             new_sub = form.save(commit=False)
             new_sub.save()
-            context = {'form' :form, 'sub_error':sub_error}
+            context = {'form' :form, 'sub_error':sub_error, 'success': success}
             return render(request, 'home.html', context)
         else: 
             sub_error = True
+            success = False
     else:
         form = Subscriber_Form()
         sub_error = False
-    context = {'form' :form, 'sub_error':sub_error}
+        success = False
+    context = {'form' :form, 'sub_error':sub_error, 'success': success}
     return render(request, 'home.html', context)
 
 
