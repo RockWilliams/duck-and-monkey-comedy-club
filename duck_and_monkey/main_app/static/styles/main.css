@@ -31,11 +31,11 @@ h2{
     /* font-family: SF Pro Display!important;
     font-style: bold!important;
     font-size: 20px!important; */
-    position: absolute;
-    width: 167px;
+    position: relative;
+    /* width: 167px;
     height: 72px;
     left: 17px;
-    top: 652px;
+    top: 652px; */
     
     font-family: SF Pro Display;
     font-style: normal;
@@ -94,4 +94,17 @@ footer,.right{
 .fab {
     width: 30px!important;
     height: 30px!important;
+}
+
+.data{
+    color:white;
+}
+
+hr {
+    position: relative;
+    z-index: 10;
+    border: none;
+    width: 96vw;
+    height: 12px;
+    background-color: lightgray;
 }
