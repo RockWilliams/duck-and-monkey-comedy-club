@@ -6,7 +6,7 @@
 
 // getHamburger.addEventListener("click", toggleMenu);
 
-const $menu = $('#toggle-menu').on("click", function(event) {
+const $menu = $('.tootle-menu').on("click", function(event) {
     console.log("Clicked")
-    $('.main-menu').toggle();
+    $('.mainMenu').toggle();
 });
