@@ -81,3 +81,17 @@ h3{
 img{
     width: max-content;
 }
+
+footer,.right{
+    background-color: var(--background-drk-blue);
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center!important;
+}
+
+.fab {
+    width: 30px!important;
+    height: 30px!important;
+}
