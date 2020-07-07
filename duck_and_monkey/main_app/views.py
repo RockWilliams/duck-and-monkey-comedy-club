@@ -9,14 +9,27 @@ def home(request):
     if request.method == "POST":
         form = Subscriber_Form(request.POST)
         if form.is_valid():
+            sub_error = False
             new_sub = form.save(commit=False)
             new_sub.save()
-            return redirect('home')
+            context = {'form' :form, 'sub_error':sub_error}
+            return render(request, 'home.html', context)
+        else: 
+            sub_error = True
     else:
         form = Subscriber_Form()
-    context = {'form' :form}
+        sub_error = False
+    context = {'form' :form, 'sub_error':sub_error}
     return render(request, 'home.html', context)
 
 
 def dashboard(request):
-    return render(request, 'dashboard.html')
+    subscribers = Subscriber.objects.all()
+    print(subscribers)
+    count = 0
+    for subscriber in subscribers:
+        count = count + 1
+
+    sub_total = subscribers.count()
+    context = {'sub_total':sub_total, 'subscribers': subscribers, 'count':count}
+    return render(request, 'dashboard.html', context)

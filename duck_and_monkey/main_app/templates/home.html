@@ -2,10 +2,51 @@
 
 {% block body %}
     <h1>Home</h1>
-    <form action="/#sub-form" id="sub-form" class="subscriber-form" method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="btn tbn-default">Subscribe!</button>
-    </form>
+    <!-- <form action="/#sub-form" id="sub-form" class="subscriber-form" method="POST"> -->
+    <a href="" class="nav-link btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modal">Subscribe</a>
+    <!-- </form> -->
+
+
+
+    <div class="modal fade show" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <form action="{% url 'home' %}" method="POST">
+                    <div class="modal-header text-center">
+                        {% csrf_token %}
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title w-100 font-weight-bold">Sign Up For Our Newsletter!</h4>
+                    </div>
+                    <div class="modal-body mx-3">
+                        <div class="md-form mb-5">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                        </div>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center">
+                        <button type="submit" class="btn tbn-default">Subscribe!</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    {% if sub_error %}
+    <script>
+        $(document).ready(function () {
+            $("#modal").modal('show');
+        });
+    </script>
+    {% endif %}
+    {% if sub_error == False %}
+    <script>
+        $(document).ready(function () {
+            $("#modal").modal('hide');
+        });
+    </script>
+    {% endif %}
 
 {% endblock %}
