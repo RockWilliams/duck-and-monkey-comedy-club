@@ -88,19 +88,57 @@
         </div>
     </div>
 
+    <div class="modal fade show" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <form >
+                    <div class="modal-header text-center">
+                        {% csrf_token %}
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title w-100 font-weight-bold">Congrats on signing up for endless laughs! See you at the next event!</h4>
+                    </div>
+                    <div class="modal-body mx-3">
+                        <button class="btn btn-default btn-rounded book-a-show-btn">BOOK A SHOW</button>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center">
+                        <img src="https://www.fodors.com/wp-content/uploads/2018/08/NYC-Comedy-Clubs-CAVEAT.jpg" alt="Group picture at comedy club" style="width: 302px;height: 241px;">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
     {% if sub_error %}
-    <script>
-        $(document).ready(function () {
-            $("#modal").modal('show');
-        });
-    </script>
+        <script>
+            $(document).ready(function () {
+                $("#modal").modal('show');
+            });
+        </script>
     {% endif %}
+
     {% if sub_error == False %}
-    <script>
-        $(document).ready(function () {
-            $("#modal").modal('hide');
-        });
-    </script>
+        <script>
+            $(document).ready(function () {
+                $("#modal").modal('hide');
+            });
+        </script>
+    {% endif %}
+
+    {% if success %}
+        <script>
+            $(document).ready(function () {
+                $("#confirmationModal").modal('show');
+            });
+        </script>
+    {% else %}
+        <script>
+            $(document).ready(function () {
+                $("#confirmationModal").modal('hide');
+            });
+        </script>
     {% endif %}
 
 {% endblock %}
