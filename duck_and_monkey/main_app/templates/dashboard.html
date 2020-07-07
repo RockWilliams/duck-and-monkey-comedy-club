@@ -3,4 +3,7 @@
 {% block body %}
 	<h1>Dashboard</h1>
 	<h3>Current Subscribers: {{ subscribers.count }}</h3>
+	{% for subscriber in subscribers %}
+		<p>Name: {{ subscriber.full_name }} Email: {{ subscriber.email }}</p>
+	{% endfor %}
 {% endblock %}
