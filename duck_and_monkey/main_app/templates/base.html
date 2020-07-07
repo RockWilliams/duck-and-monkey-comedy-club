@@ -5,6 +5,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="{%static 'styles/main.css'%}">
+		<link rel="stylesheet" href="{%static 'styles/hamburger.css'%}">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 		<script src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -28,26 +29,21 @@
 	</head>
 	<header>
 		<h1>Duck and Monkey Comedy Club</h1>
-		<div class="container">
-			<!-- This checkbox will give us the toggle behavior, it will be hidden, but functional -->
-			<input id="toggle" type="checkbox">
-		
-			<!-- IMPORTANT: Any element that we want to modify when the checkbox state changes go here, being "sibling" of the checkbox element -->
-		
-			<!-- This label is tied to the checkbox, and it will contain the toggle "buttons" -->
-			<label class="toggle-container" for="toggle">
-				<!-- If menu is open, it will be the "X" icon, otherwise just a clickable area behind the hamburger menu icon -->
-				<span class="button button-toggle"></span>
-			</label>
-		
-			<!-- The nav menu -->
-			<nav class="nav">
-				<a class="nav-item" href="">Dashboard</a>
-				<a class="nav-item" href="">History</a>
-				<a class="nav-item" href="">Statistics</a>
-				<a class="nav-item" href="">Settings</a>
-			</nav>
-		</div>
+		<nav>
+			<div class="tootle-menu" >
+				<h1 id="toggle-bar">
+					☰
+				</h1>
+			</div>
+			<ul class="mainMenu">
+				<li><a href="{% url 'home' %}">Home</a></li>
+				<li><a href="">Calendar</a></li>
+				<li><a href="">Venue Info</a></li>
+				<li><a href="">Private Events</a></li>
+				<li><a href="">FAQ</a></li>
+				<li><a href="{% url 'dashboard' %}">Admin</a></li>
+			</ul>
+		</nav>	
 	</header>
 	<body>
 		{% block body %} 
