@@ -2,9 +2,35 @@
 
 {% block body %}
     <h1>Home</h1>
-    <!-- <form action="/#sub-form" id="sub-form" class="subscriber-form" method="POST"> -->
-    <a href="" class="nav-link btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modal">Subscribe</a>
-    <!-- </form> -->
+    <header>
+        <img class="home-header-pic" src="" alt="">
+        <button class="btn btn-default btn-rounded find-tickets-btn">FIND TICKETS</button>
+    </header>
+    <div class="live-comedy">
+
+        <video width="320" height="240" controls>
+            <source src="../videos/movie.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="events-calendar">
+        <div class="card comedian">
+            <img src="" alt="">
+            <h4>Dave Chapelle</h4>
+            <p>
+                <span>Thurs// Jul 8</span>     Show: 11:00PM
+            </p>
+            <button class="btn btn-default btn-rounded find-tickets-btn">FIND TICKETS</button>
+            <button class="btn btn-default btn-rounded event-details-btn">EVENT DETAILS</button>
+        </div>
+    </div>
+    <div class="card subscribe-card">
+        <h2>Laugh With Us!</h2>
+        <p>Never miss an event! Sign up for our newsletter to recieve weekly news and updates.</p>
+        <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modal">Sign Me Up</a>
+        <p>We respect your privacy.</p>
+        <p>Update your email preferences at any time.</p>
+    </div>
 
 
 
