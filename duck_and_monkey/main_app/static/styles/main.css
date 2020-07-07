@@ -1,0 +1,18 @@
+html,
+body {
+    background-color: var(--background-drk-blue);
+}
+
+
+
+:root {
+    --background-drk-blue: #121c36;
+    --button-gold: #be9224;
+    --button-beige: #958960;
+    --box-comedian-info: #e4e4e4;
+  }
+
+  .btn{
+      background-color: var(--button-gold)!important;
+      
+  }
