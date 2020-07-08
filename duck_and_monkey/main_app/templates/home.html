@@ -76,8 +76,10 @@
                     </div>
                     <div class="modal-body mx-3">
                         <div class="md-form mb-5">
+                            <a href="">Our Newsletter!</a>
                             {% csrf_token %}
                             {{ form.as_p }}
+                            <h3>By singning up, you agree to our <a href="">Terms of Use</a> and <a href="">Privacy Policy.</a> We respect your privacy.</h3>
                         </div>
                     </div>
                     <div class="modal-footer d-flex justify-content-center">

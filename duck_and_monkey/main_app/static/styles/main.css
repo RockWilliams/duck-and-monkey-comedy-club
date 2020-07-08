@@ -81,9 +81,9 @@ h4{
       background-color: var(--button-gold)!important;
       margin: 5px!important;
       color: white!important;
-      width: 110px!important;
+      width: 212px!important;
       box-shadow: 0px 4px 8px #414141;     
-  }
+}
 
 /* img{
     width: max-content;
@@ -112,6 +112,6 @@ hr {
     z-index: 10;
     border: none;
     width: 96vw;
-    height: 12px;
+    height: 1px;
     background-color: lightgray;
 }
